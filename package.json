@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "npx nodemon Backend/src/index.js",
+    "start": "npm run server --prefix Backend",
     "build": "npm install --prefix Frontend && npm run build --prefix Frontend"
   },
   "keywords": [],
