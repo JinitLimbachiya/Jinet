@@ -36,12 +36,6 @@ if(process.env.NODE_ENV == "production") {
     })
 }
 
-app.use(express.static(path.join(_dirname, "/Frontend/dist")))
-app.get('*', (_, res) => {
-    res.sendFile(path.resolve(_dirname, "Frontend", "dist", "index.html"))
-})
-
-
 server.listen(port, () => {
     console.log("Server is now live")
     connectDB()
