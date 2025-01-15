@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "npm run start --prefix Backend",
+    "start": "npm run server --prefix Backend",
+    "server": "node src/index.js --prefix Backend",
     "build": "npm install --prefix Backend && npm install --prefix Frontend && npm run build --prefix Frontend"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jinit Limbachiya",
   "license": "ISC",
   "description": ""
 }
