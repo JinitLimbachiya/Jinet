@@ -2,13 +2,17 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import express from 'express'
 import cookieParser from 'cookie-parser'
+import { fileURLToPath } from 'url'
+import { dirname, join } from 'path'
 
 import messageRoutes from './routes/message.route.js'
 import authRoutes from './routes/auth.route.js'
 
 import connectDB from './lib/db.js'
 import { app, server } from './lib/socket.js'
-import path from 'path'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 dotenv.config()
 
