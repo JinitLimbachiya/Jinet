@@ -4,7 +4,7 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "server": "npx nodemon src/index.js",
+    "server": "nodemon src/index.js",
     "start": "node src/index.js"
   },
   "keywords": [],
