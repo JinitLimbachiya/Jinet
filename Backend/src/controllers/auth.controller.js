@@ -111,7 +111,7 @@ export const updateProfilePicture = async (req, res) => {
 
         const base64Length = profilePicture.length - (profilePicture.indexOf(",") + 1);
         const fileSizeInBytes = (base64Length * 3) / 4 - (profilePicture.endsWith("==") ? 2 : profilePicture.endsWith("=") ? 1 : 0);
-        const maxSizeInBytes = 2 * 1024 * 1024; // 2MB
+        const maxSizeInBytes = 10 * 1024 * 1024; // 2MB
 
         if (fileSizeInBytes > maxSizeInBytes) {
             return res.status(413).json({ message: "File size exceeds 2MB limit" });
