@@ -13,8 +13,10 @@ const Sidebar = () => {
   const [ showOnlineOnly, setShowOnlineOnly ] = useState(false)
 
   useEffect(() => {
-    getUsers()
-  }, [getUsers])
+    if(authUser) {
+      getUsers()
+    }
+  }, [getUsers, authUser])
 
   const filteredUsers = showOnlineOnly
                         ? users.filter((user) => onlineUsers.includes(user._id) && user._id !== authUser._id )
@@ -102,7 +104,7 @@ const Sidebar = () => {
         { filteredUsers.length ==  0 && (
           <div
           className='text-center text-zinc-500 py-4'>
-            No online users
+            {showOnlineOnly ? 'No online users' : 'No users available'}
           </div>
         )}
 

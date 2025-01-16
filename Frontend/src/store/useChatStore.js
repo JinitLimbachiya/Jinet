@@ -29,7 +29,6 @@ export const useChatStore = create((set, get) => ({
         }
     },
 
-
     // TO GET THE MESSAGES FROM 2 INDIVIDUAL USERS
     getMessages: async (userId) => {
         set({ messages: [], isMessageLoading: true })
@@ -47,7 +46,6 @@ export const useChatStore = create((set, get) => ({
             set({ isMessageLoading: false })
         }
     },
-
 
     // TO SEND THE MESSAGES
     sendMessage: async (messageData) => {

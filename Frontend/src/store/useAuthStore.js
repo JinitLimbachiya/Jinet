@@ -45,6 +45,8 @@ export const useAuthStore = create((set, get) => ({
             toast.success("Account created successfully")
             
             get().connectSocket()
+
+            get().socket.emit("getOnlineUsers")
         }
 
         catch (error) {
